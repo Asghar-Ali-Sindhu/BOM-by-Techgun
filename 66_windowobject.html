@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Object</title>
+    <style>
+        /* body{
+            background: red;
+        } */
+    </style>
+</head>
+<body>
+    <button id="btn1">Open Window</button>
+    <button id="btn2">Open New Window</button>
+    <button id="btn3">Close Window</button>
+    
+
+    <script>
+        // We want to find the size of the window i.e. browser size.
+        // There are two types of the size i) inner height and inner width--- This is the area where webpage is visible.       ii) outer height and outer width---Its consists of whole browser including document, webpage and console portion.
+        // console.log(window.innerHeight);
+        // console.log(window.innerWidth);
+        // console.log(window.outerHeight);
+        // console.log(window.outerWidth);
+        // innerWidth and window. outerWidth will differ if you have zoomed in or out. innerWidth will show the scaled width of the window, while outerWidth will not take zooming into account.
+        
+
+        // **** How to open a new window
+        // const btn1 = document.querySelector('#btn1');
+        // btn.addEventListener('click', function(){
+        //     // window.open() // It will a black page
+        //     // window.open("https://www.wikipedia.com")
+        // })
+
+        // **** There are three parameters in open(url, name, features) window. List of features can be seen from mdn
+        //  const btn = document.querySelector('button');
+        //  const url = "https://www.wikipedia.com";
+        //  features = "height:500px, width:500px"
+        //     btn.addEventListener('click', function(){
+        //         window.open(url, 'wikipedia', features)
+        //     })
+
+
+        // **** Use of name. It change the content of the wikipedia to google in the same window. If this name is written, the new changed content will be opened in the new window.
+        // const btn1 = document.querySelector('#btn1');
+        // const btn2 = document.querySelector('#btn2');
+        //      const url = "https://www.wikipedia.com";
+        //      features = "height:500px, width:500px"
+        //         btn1.addEventListener('click', function(){
+        //             window.open(url, 'wikipedia', features)
+        //         })
+        //         btn2.addEventListener('click', function(){
+        //             window.open("https://www.google.com", 'wikipedia',  features)
+        //             window.open("https://www.google.com",  features) // new window
+        //         })
+
+
+
+        // ***** How to close
+        // const btn1 = document.querySelector('#btn1');
+        // const btn2 = document.querySelector('#btn2');
+        // const btn3 = document.querySelector('#btn3');
+        // const url = "https://www.wikipedia.com";
+        // features = "height:500px, width:500px"
+        // btn1.addEventListener('click', function(){
+        //     window.open(url, 'wikipedia', features)
+        // })
+        // btn2.addEventListener('click', function(){
+        // window.open("https://www.google.com", 'wikipedia',  features)
+        // // window.open("https://www.google.com",  features) // new window
+        //             })
+        // btn3.addEventListener('click', function(){
+        // window.close()
+        //             })
+
+        // ****** Set Time Out
+    //    setTimeout(myFunction, 2000);
+    //     function myFunction(){
+    //         console.log("Two minutes later activity");
+    //     }
+    //     clearTimeout(timeId); // This will clear the settime out. Usually it is applied after some condition.
+
+        //  In order to clear set time out
+        // const timeId = setTimeout(myFunction, 2000);
+        // function myFunction(){
+        //     console.log("Two minutes later activity");
+        // }
+        // clearTimeout(timeId); // This will clear the settime out. Usually it is applied after some condition.
+
+        // **** time Interval
+        // It will diplay the time after each second
+        // setInterval(myfun, 1000);
+        // function myfun(){
+        //     const date = new Date();
+        //     console.log(date.toLocaleTimeString());
+        // }
+
+        // *****
+         setInterval(myfun, 1000);
+            function myfun(){
+                const date = new Date();
+                console.log(date.toLocaleTimeString());
+            }
+    </script>
+</body>
+</html>
